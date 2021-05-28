@@ -1,3 +1,5 @@
+using EFCore.WebAPi.Data;
+using EFCore.WebAPi.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -26,6 +28,12 @@ namespace EFCore.WebAPi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            //so cria um
+            services.AddScoped<Contexto, Contexto>();
+
+            //
+            services.AddTransient<ProductRepository, ProductRepository>();
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

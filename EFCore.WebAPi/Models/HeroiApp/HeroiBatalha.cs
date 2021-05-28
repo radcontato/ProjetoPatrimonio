@@ -1,4 +1,4 @@
-﻿namespace EFCore.WebAPi.Models
+﻿namespace EFCore.WebAPi.Models.HeroiApp
 {
     public class HeroiBatalha
     {

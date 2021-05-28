@@ -1,4 +1,6 @@
 ﻿using EFCore.WebAPi.Models;
+using EFCore.WebAPi.Models.HeroiApp;
+using EFCore.WebAPi.Models.Loja;
 using Microsoft.EntityFrameworkCore;
 
 namespace EFCore.WebAPi.Data
@@ -10,6 +12,8 @@ namespace EFCore.WebAPi.Data
         public DbSet<Arma> Armas { get; set; }
         public DbSet<HeroiBatalha> HeroiBatalhas { get; set; }
         public DbSet<IdentidadeSecreta> IdentidadeSecretas { get; set; }
+        public DbSet<Product> Products { get; set; }
+        public DbSet<Category> Categories { get; set; }
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -19,6 +23,10 @@ namespace EFCore.WebAPi.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+
+
+
+
             modelBuilder.Entity<HeroiBatalha>(entity =>
             {
                 entity.HasKey(e => new { e.BatalhaId, e.HeroiId });

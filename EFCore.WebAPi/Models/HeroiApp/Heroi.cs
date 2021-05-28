@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EFCore.WebAPi.Models
+namespace EFCore.WebAPi.Models.HeroiApp
 {
     public class Heroi
     {
