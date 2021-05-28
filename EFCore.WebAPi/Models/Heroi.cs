@@ -1,10 +1,14 @@
-﻿namespace EFCore.WebAPi.Models
+﻿using System.Collections.Generic;
+
+namespace EFCore.WebAPi.Models
 {
     public class Heroi
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public Batalha Batalha { get; set; }
-        public int BatalhaId { get; set; }
+        public IdentidadeSecreta IdentidadeSecreta { get; set; }
+        public List<Arma> Armas { get; set; }
+        public List<HeroiBatalha> HeroiBatalhas { get; set; }
+
     }
 }
